@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 4,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": "# pyhton kodları",
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## import",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "import pandas as pd",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": 2
+    },
+    {
+      "cell_type": "code",
+      "source": "dataframe = pd.read_csv( \"metin 1.csv\" )",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": 6
+    },
+    {
+      "cell_type": "code",
+      "source": "dataframe",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "execution_count": 7,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "      ad   soyad  yaş\n0  yusuf  şimşek   14",
+            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>ad</th>\n      <th>soyad</th>\n      <th>yaş</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>yusuf</td>\n      <td>şimşek</td>\n      <td>14</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": 7
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## import 2. kısım",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "len(dataframe)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "execution_count": 11,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "1"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": 11
+    },
+    {
+      "cell_type": "code",
+      "source": "dataframe.head(2)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "execution_count": 12,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "      ad   soyad  yaş\n0  yusuf  şimşek   14",
+            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>ad</th>\n      <th>soyad</th>\n      <th>yaş</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>yusuf</td>\n      <td>şimşek</td>\n      <td>14</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": 12
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## dataframe",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "dataframe.loc[len(dataframe.index)] = ['dilara' , 89,93]\ndataframe.tail()\ndataframe.sort_values(by='yaş' , ascending=False)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "execution_count": 23,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "       ad   soyad  yaş\n1  dilara      89   93\n2  dilara      89   93\n3  dilara      89   93\n0   yusuf  şimşek   14",
+            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>ad</th>\n      <th>soyad</th>\n      <th>yaş</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>1</th>\n      <td>dilara</td>\n      <td>89</td>\n      <td>93</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>dilara</td>\n      <td>89</td>\n      <td>93</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>dilara</td>\n      <td>89</td>\n      <td>93</td>\n    </tr>\n    <tr>\n      <th>0</th>\n      <td>yusuf</td>\n      <td>şimşek</td>\n      <td>14</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": 23
+    },
+    {
+      "cell_type": "markdown",
+      "source": "### dataframe alt kısım",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "dataframe",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "execution_count": 15,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "       ad   soyad  yaş\n0   yusuf  şimşek   14\n1  dilara      89   93",
+            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>ad</th>\n      <th>soyad</th>\n      <th>yaş</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>yusuf</td>\n      <td>şimşek</td>\n      <td>14</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>dilara</td>\n      <td>89</td>\n      <td>93</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": 15
+    }
+  ]
+}
